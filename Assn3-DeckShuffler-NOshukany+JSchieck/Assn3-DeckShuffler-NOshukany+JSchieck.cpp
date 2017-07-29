@@ -5,6 +5,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include <string>
 
 using namespace std;
 
@@ -16,10 +17,11 @@ const int Jack = 11;
 const int Queen = 12;
 const int King = 13;
 const int Ace = 14;
-#define DeckSize = 52
+const int DeckSize = 52;
 int cardValue;
 string cardSuit;
 int currentCard;
+string cardDisplay;
 
 string fullCard;
 
@@ -70,6 +72,7 @@ public:
 		fullString = value + suit;
 		return fullString;
 	}
+	string print();
 
 private:
 	int face;
@@ -116,13 +119,14 @@ card::card(int cardValue, string cardSuit) {
 
 //print function
 string card::print() {
-	return (face + suit);
+	string cardDisplay = std::to_string(face) + suit;
+	return (cardDisplay);
 }
 
 //create the deck of 52 cards
 deckOfCards::deckOfCards() {
-	string faces[] = { "A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K" };
-	string suits[] = { "♣","♦", "♥", "♠" };
+	int faces[] = { 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 };
+	string suits[] = { "Clubs", "Hearts", "Diamonds", "Spades" };
 	deck = new card[DeckSize];
 	currentCard = 0;
 	for (int count = 0; count < DeckSize; count++) {
