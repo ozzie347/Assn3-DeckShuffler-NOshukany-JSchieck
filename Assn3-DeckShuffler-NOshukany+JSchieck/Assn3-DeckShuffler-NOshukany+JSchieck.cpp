@@ -10,7 +10,7 @@
 using namespace std;
 
 //enum
-enum suits{clubs = '♣', diamonds = '♦', hearts = '♥', spades = '♠'};
+enum suits { clubs = '♣', diamonds = '♦', hearts = '♥', spades = '♠' };
 
 //constant variables
 const int Jack = 11;
@@ -43,7 +43,7 @@ public:
 		{
 			value = cardValue;
 		}
-		else if(cardValue == 11) {
+		else if (cardValue == 11) {
 			value = "J";
 		}
 		else if (cardValue == 12) {
@@ -95,12 +95,13 @@ private:
 //main function
 int main()
 {
+	card currentC;
 	deckOfCards deck;
 	deck.shuffle();
 	for (int i = 0; i <= 2; i++)
 	{
-		currentCard = deck.deal();
-		cout << currentCard.print() << endl;
+		currentC = deck.deal();
+		cout << currentC.print() << endl;
 		return 0;
 	}
 }
@@ -130,7 +131,7 @@ deckOfCards::deckOfCards() {
 	deck = new card[DeckSize];
 	currentCard = 0;
 	for (int count = 0; count < DeckSize; count++) {
-		DeckSize[count] = card(faces[count % 13], suits[count / 13]);
+		deck[count] = card(faces[count % 13], suits[count / 13]);
 	}
 }
 
