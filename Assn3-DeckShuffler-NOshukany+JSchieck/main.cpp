@@ -10,9 +10,17 @@
 #include <string>
 #include "Cards.h"
 #include "Deck.h"
+#include "GameRules.h"
 
 using namespace std;
 
 int main() {
 
+	gameRules match = gameRules();
+
+	match.run();
+
+	system("pause");
+
+	return 0;
 }

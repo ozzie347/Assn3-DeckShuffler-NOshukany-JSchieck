@@ -147,6 +147,10 @@
   <ItemGroup>
     <ClInclude Include="Cards.h" />
     <ClInclude Include="Deck.h" />
+    <ClInclude Include="GameRules.h" />
+    <ClInclude Include="Hand.h" />
+    <ClInclude Include="Play.h" />
+    <ClInclude Include="Player.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>

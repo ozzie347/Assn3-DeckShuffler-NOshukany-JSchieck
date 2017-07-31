@@ -30,6 +30,18 @@
     <ClInclude Include="Cards.h">
       <Filter>Source Files</Filter>
     </ClInclude>
+    <ClInclude Include="GameRules.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Play.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Hand.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
